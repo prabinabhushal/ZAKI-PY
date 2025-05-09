@@ -9,7 +9,7 @@ from pathlib import Path
 def extract(zip_file):
 
     zip_path = Path(zip_file)
-    output_path = zip_path.parent
+    output_path = zip_file
     network = []
     provider = []
     
