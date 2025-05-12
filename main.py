@@ -8,7 +8,7 @@ def main ():
     #  zip_file = sys.argv[1]
  
     parser = argparse.ArgumentParser(description="ETL for ZIP file with network and provider data.") #argumentParse object
-    parser.add_argument("zip_file", help="Full path to the ZIP file to process")
+    parser.add_argument("--zip_file", help="Full path to the ZIP file to process")  #optional argument
     args = parser.parse_args()
    
 
