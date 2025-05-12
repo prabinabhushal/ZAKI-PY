@@ -11,6 +11,8 @@ def scrub (net_path,pro_path):
         .config("spark.driver.memory", "4g").getOrCreate()
     spark
 
+    net_path = str(net_path)
+    pro_path = str(pro_path)
 
     network = spark.read.option("multiline", "true").json(net_path)
     network.printSchema()
@@ -102,18 +104,11 @@ def scrub (net_path,pro_path):
     in_network_cast = new_network.withColumn("service_code",col("service_code").cast(ArrayType(IntegerType())))
 
     in_network_cast.printSchema()
-
-    print(in_network_cast)
-
-    type(in_network_cast)
-    type(provider_cast)
-
-
-    net_parquet ='/home/prabina-bhushal/Desktop/PrabinaZaki/3ETL-prabinaBhushal/IgnoreFolder/NetworkScrub.parquet'
-    pro_parquet ='/home/prabina-bhushal/Desktop/PrabinaZaki/3ETL-prabinaBhushal/IgnoreFolder/ProviderScrub.parquet'
+    in_network_cast.show(5)
+    net_parquet ='output/NetworkScrub.parquet'
+    pro_parquet ='output/ProviderScrub.parquet'
     
-
-    in_network_cast.write.parquet(net_parquet)
-    provider_cast.write.parquet(pro_parquet)
+    in_network_cast.write.mode("overwrite").parquet(net_parquet)
+    provider_cast.write.mode("overwrite").parquet(pro_parquet)
 
     return net_parquet,pro_parquet
