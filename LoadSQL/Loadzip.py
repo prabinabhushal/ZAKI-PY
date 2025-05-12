@@ -8,7 +8,6 @@ def load(net_parquet,pro_parquet):
     from pyspark.sql import SparkSession
     spark = SparkSession.builder \
         .appName("PostgresSQLConn") \
-        .config("spark.jars", "/home/prabina-bhushal/jars/postgresql-42.5.6.jar") \
         .getOrCreate()
     spark
     jdbc_url = "jdbc:postgresql://localhost:5432/postgres"
