@@ -1,27 +1,26 @@
 import psycopg2
-from pyspark.sql import SparkSession
 
+def load(net_parquet,pro_parquet,etl):
+    spark = etl.spark
+    port = etl.port
+    host = etl.host
+    dbname = etl.dbname
+    user = etl.user
+    password= etl.password
 
-def load(net_parquet,pro_parquet): 
-
-    import psycopg2
-    from pyspark.sql import SparkSession
-    spark = SparkSession.builder \
-        .appName("PostgresSQLConn") \
-        .getOrCreate()
-    spark
-    jdbc_url = "jdbc:postgresql://localhost:5432/postgres"
+    
+    jdbc_url = f"jdbc:postgresql://{host}:{port}/{dbname}"
     conn_properties = {
         "user" : "postgres",
         "password" : "123",
         "driver" :"org.postgresql.Driver"
     }
     conn = psycopg2.connect(
-        port = 5432,
-        host = "localhost",
-        dbname='postgres',
-        user ="postgres",
-        password = "123",
+        port = port,
+        host = host,
+        dbname= dbname,
+        user = user,
+        password = password,
     )
     cursor = conn.cursor()
     pprovider_table = """
