@@ -1,15 +1,12 @@
-
 # Scrub
-
+import yaml
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import explode, col,array,when
 from pyspark.sql.types import ArrayType, IntegerType, ShortType
 
-def scrub (net_path,pro_path):
-    spark = SparkSession.builder\
-    .appName('ETL')\
-        .config("spark.driver.memory", "4g").getOrCreate()
-    spark
+def scrub (net_path,pro_path,etl):
+    spark = etl.spark
+
 
     net_path = str(net_path)
     pro_path = str(pro_path)
@@ -17,7 +14,7 @@ def scrub (net_path,pro_path):
     network = spark.read.option("multiline", "true").json(net_path)
     network.printSchema()
 
-
+    #Flatten network file
     network_exploded = network.withColumn("rates", explode("negotiated_rates"))
     id_exploded = network_exploded.withColumn("id", explode("rates.provider_references"))
     network_rates = id_exploded.withColumn("prices",explode("rates.negotiated_prices"))
@@ -33,7 +30,6 @@ def scrub (net_path,pro_path):
     col("prices.billing_code_modifier").alias("billing_code_modifier"),
     col("prices.service_code").alias("service_code")
     )
-
 
     in_network.printSchema()
 
@@ -57,12 +53,9 @@ def scrub (net_path,pro_path):
     provider_final=in_provider.withColumn("tin_type",when(col("tin_type")=="ein",1)
                                       .when(col("tin_type")== "npi",2))
     
-    provider_final.show()
-
+    provider_final.show(5)
 
     #Remove null value
-
-
     from pyspark.sql.functions import expr
 
     in_network.count()
@@ -75,9 +68,7 @@ def scrub (net_path,pro_path):
 
     new_network=in_network.filter(in_network.billing_code.isNotNull())
 
-
     # hash_network=remove_network.withColumn('service_code',hash('service_code'))
-
 
     in_provider_hyphen = provider_final.withColumn("tin",expr("REPLACE(tin,'-','')"))
 
@@ -97,7 +88,6 @@ def scrub (net_path,pro_path):
     #Cast to array of integer
 
     provider_cast = in_provider_hyphen.withColumn("tin_type",col("tin_type").cast(ShortType()))
-
 
     provider_cast.printSchema()
 
