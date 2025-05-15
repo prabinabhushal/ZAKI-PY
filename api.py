@@ -11,7 +11,6 @@
 # user input must be either apiA or apiD - api denotes that the api related code must be executed and the ending A or D denotes the sorting order
 
 import requests
-import json
 
 class Parent:
     def __init__(self, name, distance_km):
@@ -38,8 +37,29 @@ def planets():
 
     return new_bodies
 
-planet_objects = planets()
-for planet in planet_objects:
-    print(planet)
+def insertion_sort(planets, ascending=True):
+    for i in range(1, len(planets)):
+        key = planets[i]
+        j = i - 1
+        while j >= 0 and ((planets[j].distance > key.distance) if ascending else (planets[j].distance < key.distance)):
+            planets[j + 1] = planets[j]
+            j -= 1
+        planets[j + 1] = key
+    return planets
 
+def show_ascending(logger):
+    planet_new = planets()
+    sorted_planets = insertion_sort(planet_new, ascending=True)
+    logger.info("Planets sorted in ascending order by distance:")
+    for planet in sorted_planets:
+        logger.info(planet)
+      
+
+def show_descending(logger):
+    planet_new = planets()
+    sorted_planets = insertion_sort(planet_new, ascending=False)
+    logger.info("Planets sorted in descending order by distance:")
+    for planet in sorted_planets:
+        logger.info(planet)
+     
 
