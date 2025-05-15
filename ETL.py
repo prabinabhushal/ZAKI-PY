@@ -11,7 +11,6 @@ class ExtractTransferLoad:
         with open ("setup.yml",'r')as f:
             f1=yaml.safe_load(f)
 
-       
         self.container1 = f1 ['SPARK']['EXECUTOR']['CORES']
         self.container2 = f1 ['SPARK']['EXECUTOR']['INSTANCES']
         self.container3 = f1 ['SPARK']['EXECUTOR']['MEMORY']
@@ -26,14 +25,15 @@ class ExtractTransferLoad:
 
     def run(self,args,logger):
         logger.info("Initializing Spark session")
-        self.spark = SparkSession.builder\
-                .appName('ETL')\
-                .config("spark.driver.memory", self.container4).getOrCreate()
         
         logger.info("Initializing ETL process")
 
         logger.info("Starting extraction")
         net_path, pro_path = Extractzip.extract(args.zip_file)
+
+        self.spark = SparkSession.builder\
+                .appName('ETL')\
+                .config("spark.driver.memory", self.container4).getOrCreate()
 
         logger.info("Starting scrub step")
         net_parquet, pro_parquet = Scrubzip.scrub(net_path, pro_path, self)
@@ -41,7 +41,6 @@ class ExtractTransferLoad:
         logger.info("Starting load to database")
         Loadzip.load(net_parquet, pro_parquet, self)
 
-         
         logger.info("ETL process is complete")
 
 
