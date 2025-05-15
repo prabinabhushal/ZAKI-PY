@@ -4,14 +4,6 @@ from Extract1st import Extractzip
 from ScrubExplode2nd import Scrubzip
 from LoadSQL import Loadzip
 from pyspark.sql import SparkSession
-import logging
-
-# Setup logger
-logging.basicConfig(
-    level=logging.INFO,format='%(asctime)s - %(levelname)s - %(message)s'
-    )
-logger = logging.getLogger("getLogger")
-
 
 class ExtractTransferLoad:
     def __init__(self):
@@ -32,12 +24,7 @@ class ExtractTransferLoad:
         self.user = f1['POSTGRES']['user']
         self.password= f1['POSTGRES']['password']
 
-    def run(self):
-        logger.info("Reading setup.yml configuration file...")
-        parser = argparse.ArgumentParser(description="ETL for ZIP file with network and provider data.")
-        parser.add_argument("--zip_file", required=True, help="Full path to the ZIP file to process")
-        args = parser.parse_args()
-
+    def run(self,args,logger):
         logger.info("Initializing Spark session")
         self.spark = SparkSession.builder\
                 .appName('ETL')\
