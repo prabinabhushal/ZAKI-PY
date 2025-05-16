@@ -11,6 +11,8 @@ def main ():
 
     parser = argparse.ArgumentParser(description="ETL for ZIP file or api for planet sort")
     parser.add_argument("--zip_file",help="Full path to the ZIP file to process")
+    parser.add_argument("--pdetail_file",help="New path of provider detail")
+
 
     args = parser.parse_args()
     etl = ExtractTransferLoad()
