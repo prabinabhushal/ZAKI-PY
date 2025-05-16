@@ -31,12 +31,12 @@ class ExtractTransferLoad:
         logger.info("Starting extraction")
         net_path, pro_path = Extractzip.extract(args.zip_file)
 
-        self.spark = SparkSession.builder\
-                .appName('ETL')\
-                .config("spark.driver.memory", self.container4).getOrCreate()
+        pdetail_file = args.pdetail_file
+        
+        self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate()
 
         logger.info("Starting scrub step")
-        net_parquet, pro_parquet = Scrubzip.scrub(net_path, pro_path, self)
+        net_parquet, pro_parquet = Scrubzip.scrub(net_path, pro_path,pdetail_file ,self)
 
         logger.info("Starting load to database")
         Loadzip.load(net_parquet, pro_parquet, self)
