@@ -23,28 +23,39 @@ def load(net_parquet,pro_parquet,etl):
         password = password,
     )
     cursor = conn.cursor()
-    pprovider_table = """
-    CREATE TABLE IF NOT EXISTS pprovider_table (
-        provider_group_id INT,
-        npi INT,
-        tin_type SMALLINT,
-        tin TEXT 
+    in_provider_table = """
+    CREATE TABLE IF NOT EXISTS in_provider_table (
+        provider_group_id BIGINT,                
+        npi BIGINT,                          
+        tin_type SMALLINT,                    
+        tin VARCHAR(12),                           
+        prv_city VARCHAR(255),                 
+        prv_phone VARCHAR(12),                   
+        prv_state CHAR(2),                   
+        prv_street_1 VARCHAR(255),            
+        prv_zip VARCHAR(10),                      
+        latitude DOUBLE PRECISION,              
+        longitude DOUBLE PRECISION,            
+        prv_type_code INT,           
+        provider_full_name VARCHAR(255),      
+        all_specialties TEXT[],                
+        taxonomy_codes TEXT[]                  
     );
     """
-    cursor.execute(pprovider_table)
+    cursor.execute(in_provider_table)
     conn.commit()
     spark2 = spark.read.parquet(pro_parquet)
     spark2.printSchema()
-    spark2.write.jdbc(url=jdbc_url, table="pprovider_table", mode="append", properties= conn_properties)
+    spark2.write.jdbc(url=jdbc_url, table="in_provider_table", mode="append", properties= conn_properties)
     in_network_table = """
     CREATE TABLE IF NOT EXISTS in_network_table (
-        billing_code TEXT,
-        billing_code_type TEXT,
-        negotiation_arrangement TEXT,
-        provider_group_id INT,
-        negotiated_type TEXT,
+        billing_code VARCHAR(10),
+        billing_code_type VARCHAR(10),
+        negotiation_arrangement VARCHAR(10),
+        provider_group_id BIGINT,
+        negotiated_type VARCHAR(12),
         negotiated_rate DOUBLE PRECISION,
-        billing_class TEXT,
+        billing_class VARCHAR(15),
         billing_code_modifier TEXT[],
         service_code INTEGER[]
     );
