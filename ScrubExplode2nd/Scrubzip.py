@@ -1,16 +1,15 @@
 # Scrub
 import yaml
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, col,array,when
-from pyspark.sql.types import ArrayType, IntegerType, ShortType
+from pyspark.sql.functions import explode, col,array,when,concat_ws
+from pyspark.sql.types import ArrayType, IntegerType, ShortType,LongType
 
-def scrub (net_path,pro_path,etl):
+def scrub (net_path,pro_path,pdetail_file,etl):
     spark = etl.spark
 
 
     net_path = str(net_path)
     pro_path = str(pro_path)
-
     network = spark.read.option("multiline", "true").json(net_path)
     network.printSchema()
 
@@ -95,10 +94,53 @@ def scrub (net_path,pro_path,etl):
 
     in_network_cast.printSchema()
     in_network_cast.show(5)
+
+    #New provider detail 
+    #drop prv_fax, provider_name_prefix_text, prv_type_desc from the provider_detail data
+    #prv_type_code value must be mapped to integer, when the value is 'P' map it to 1 and when it is 'F' map it to 2
+
+    provider_detail = spark.read.json(pdetail_file)
+    provider_detail.printSchema()
+
+    provider_detail1= provider_detail.select ("*",
+        col("loc.lat").alias("latitude"),
+        col("loc.lon").alias("longitude")).drop(("loc"),("prv_fax"),("provider_name_prefix_text"),("prv_type_desc"))
+    provider_detail1.printSchema()
+
+    provider_detail2 = provider_detail1.withColumn("prv_type_code",
+    when(col("prv_type_code") == "P", 1)
+    .when(col("prv_type_code") == "F", 2)
+    .otherwise(None)
+    )
+
+
+
+    provider_detail3 = provider_detail2.withColumn("provider_full_name", concat_ws(" ", "provider_first_name", "provider_middle_name", "provider_last_name"))\
+                                        .withColumn("all_specialties",array("prv_specialty_1_desc", "prv_specialty_2_desc", "prv_specialty_3_desc")) \
+                                        .withColumn("taxonomy_codes", array("prv_taxonomy_1_code", "prv_taxonomy_2_code", "prv_taxonomy_3_code"))
+    provider_detail4 = provider_detail3.drop(("provider_first_name"),("provider_last_name"),("provider_middle_name"),("prv_taxonomy_1_code"),("prv_taxonomy_2_code"),("prv_taxonomy_3_code"),("prv_specialty_1_desc"),("prv_specialty_2_desc"),("prv_specialty_3_desc"))                                 
+
+    provider_cast2 = provider_detail4.withColumn("npi",col("npi").cast(LongType())) \
+              .withColumn("prv_type_code",col("prv_type_code").cast(IntegerType()))
+
+    provider_cast2.printSchema()
+
+    provider_cast2.count()
+
+    provider_cast2.drop_duplicates().count()
+
+    provider_cast2.show(truncate=False)
+
+    provider_table2 = provider_cast.join(
+    provider_cast2, provider_cast.npi == provider_cast2.npi, 'inner'
+    ).drop(provider_cast2.npi)
+
+    provider_table2.show(truncate=False)
+
     net_parquet ='output/NetworkScrub.parquet'
     pro_parquet ='output/ProviderScrub.parquet'
     
     in_network_cast.write.mode("overwrite").parquet(net_parquet)
-    provider_cast.write.mode("overwrite").parquet(pro_parquet)
+    provider_table2.write.mode("overwrite").parquet(pro_parquet)
 
     return net_parquet,pro_parquet
