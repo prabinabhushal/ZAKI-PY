@@ -1,5 +1,4 @@
 import yaml
-import argparse
 from Extract1st import Extract_nrpr
 from ScrubExplode2nd import Scrub_nrpr
 from LoadSQL import Load_nrpr
@@ -29,9 +28,12 @@ class ExtractTransferLoad:
         logger.info("Initializing ETL process")
 
         logger.info("Starting extraction of nrpr gz file")
-        nrpr_path = Extract_nrpr.merge(args.zip_file)
+        nrpr_path,pro_path= Extract_nrpr.merge(args.zip_file,args.pdetail_file)
 
+        
+        self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate()
 
-        logger.info("ETL process is complete")
-
+        logger.info("Starting scrub of nrpr step")
+        Scrub_nrpr.scrub(nrpr_path, pro_path ,self)
+    
 
