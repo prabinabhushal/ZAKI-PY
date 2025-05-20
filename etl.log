@@ -1,0 +1,168 @@
+2025-05-15 16:38:54,116 - INFO - Initializing Spark session
+2025-05-15 16:38:58,053 - INFO - Initializing ETL process
+2025-05-15 16:38:58,054 - INFO - Starting extraction
+2025-05-15 16:40:31,922 - INFO - Starting scrub step
+2025-05-15 16:42:24,598 - INFO - Starting load to database
+2025-05-16 13:39:53,197 - INFO - Initializing Spark session
+2025-05-16 13:39:53,197 - INFO - Initializing ETL process
+2025-05-16 13:39:53,197 - INFO - Starting extraction
+2025-05-16 13:41:34,758 - INFO - Starting scrub step
+2025-05-16 13:44:37,636 - INFO - Initializing Spark session
+2025-05-16 13:44:37,636 - INFO - Initializing ETL process
+2025-05-16 13:44:37,636 - INFO - Starting extraction
+2025-05-16 13:46:37,719 - INFO - Initializing Spark session
+2025-05-16 13:46:37,719 - INFO - Initializing ETL process
+2025-05-16 13:46:37,719 - INFO - Starting extraction
+2025-05-16 13:48:14,850 - INFO - Starting scrub step
+2025-05-16 13:51:13,179 - INFO - Initializing Spark session
+2025-05-16 13:51:13,180 - INFO - Initializing ETL process
+2025-05-16 13:51:13,180 - INFO - Starting extraction
+2025-05-16 13:52:56,328 - INFO - Starting scrub step
+2025-05-16 14:02:07,168 - INFO - Initializing Spark session
+2025-05-16 14:02:07,170 - INFO - Initializing ETL process
+2025-05-16 14:02:07,170 - INFO - Starting extraction
+2025-05-16 14:03:43,528 - INFO - Starting scrub step
+2025-05-16 14:27:29,861 - INFO - Initializing Spark session
+2025-05-16 14:27:29,862 - INFO - Initializing ETL process
+2025-05-16 14:27:29,862 - INFO - Starting extraction
+2025-05-16 14:29:10,716 - INFO - Starting scrub step
+2025-05-16 14:31:08,740 - INFO - Starting load to database
+2025-05-16 14:32:27,228 - INFO - Initializing Spark session
+2025-05-16 14:32:27,228 - INFO - Initializing ETL process
+2025-05-16 14:32:27,228 - INFO - Starting extraction
+2025-05-16 14:34:07,053 - INFO - Starting scrub step
+2025-05-16 14:36:01,585 - INFO - Starting load to database
+2025-05-16 14:40:14,231 - INFO - Initializing Spark session
+2025-05-16 14:40:14,231 - INFO - Initializing ETL process
+2025-05-16 14:40:14,231 - INFO - Starting extraction
+2025-05-16 14:41:51,067 - INFO - Starting scrub step
+2025-05-16 14:43:44,172 - INFO - Starting load to database
+2025-05-16 14:46:28,498 - INFO - Initializing Spark session
+2025-05-16 14:46:28,498 - INFO - Initializing ETL process
+2025-05-16 14:46:28,499 - INFO - Starting extraction
+2025-05-16 14:48:10,664 - INFO - Starting scrub step
+2025-05-16 14:50:06,398 - INFO - Starting load to database
+2025-05-16 14:51:04,299 - INFO - Initializing Spark session
+2025-05-16 14:51:04,299 - INFO - Initializing ETL process
+2025-05-16 14:51:04,299 - INFO - Starting extraction
+2025-05-16 14:52:45,472 - INFO - Starting scrub step
+2025-05-16 14:55:49,842 - INFO - Initializing Spark session
+2025-05-16 14:55:49,842 - INFO - Initializing ETL process
+2025-05-16 14:55:49,843 - INFO - Starting extraction
+2025-05-16 14:57:27,109 - INFO - Starting scrub step
+2025-05-16 14:59:21,754 - INFO - Starting load to database
+2025-05-16 15:07:40,276 - INFO - Initializing Spark session
+2025-05-16 15:07:40,276 - INFO - Initializing ETL process
+2025-05-16 15:07:40,276 - INFO - Starting extraction
+2025-05-16 15:09:17,146 - INFO - Starting scrub step
+2025-05-16 15:11:08,789 - INFO - Starting load to database
+2025-05-16 15:13:06,009 - INFO - ETL process is complete
+2025-05-19 13:02:58,569 - INFO - Initializing Spark session
+2025-05-19 13:02:58,569 - INFO - Initializing ETL process
+2025-05-19 13:02:58,569 - INFO - Starting extraction
+2025-05-19 13:09:22,784 - INFO - Initializing Spark session
+2025-05-19 13:09:22,784 - INFO - Initializing ETL process
+2025-05-19 13:09:22,784 - INFO - Starting extraction
+2025-05-19 13:10:34,824 - INFO - Initializing Spark session
+2025-05-19 13:10:34,824 - INFO - Initializing ETL process
+2025-05-19 13:10:34,824 - INFO - Starting extraction
+2025-05-19 13:11:09,049 - INFO - Starting scrub step
+2025-05-19 13:11:38,853 - INFO - Initializing Spark session
+2025-05-19 13:11:38,853 - INFO - Initializing ETL process
+2025-05-19 13:11:38,853 - INFO - Starting extraction
+2025-05-19 13:13:15,488 - INFO - Starting scrub step
+2025-05-19 13:14:10,028 - INFO - Starting load to database
+2025-05-19 13:14:11,718 - INFO - ETL process is complete
+2025-05-19 14:05:23,403 - INFO - Initializing Spark session
+2025-05-19 14:05:23,403 - INFO - Initializing ETL process
+2025-05-19 14:05:23,403 - INFO - Starting extraction
+2025-05-19 14:05:59,464 - INFO - Starting scrub step
+2025-05-19 14:14:13,858 - INFO - Initializing Spark session
+2025-05-19 14:14:13,859 - INFO - Initializing ETL process
+2025-05-19 14:14:13,859 - INFO - Starting extraction
+2025-05-19 14:14:51,354 - INFO - Starting scrub step
+2025-05-19 14:18:17,947 - INFO - Initializing Spark session
+2025-05-19 14:18:17,947 - INFO - Initializing ETL process
+2025-05-19 14:18:17,947 - INFO - Starting extraction
+2025-05-19 14:18:53,901 - INFO - Starting scrub step
+2025-05-19 14:23:12,126 - INFO - Initializing Spark session
+2025-05-19 14:23:12,126 - INFO - Initializing ETL process
+2025-05-19 14:23:12,126 - INFO - Starting extraction
+2025-05-19 14:23:46,351 - INFO - Starting scrub step
+2025-05-19 14:24:17,433 - INFO - Starting load to database
+2025-05-19 14:24:18,923 - INFO - ETL process is complete
+2025-05-19 14:30:54,950 - INFO - Initializing Spark session
+2025-05-19 14:30:54,950 - INFO - Initializing ETL process
+2025-05-19 14:30:54,950 - INFO - Starting extraction
+2025-05-19 14:31:30,477 - INFO - Starting scrub step
+2025-05-19 14:32:04,308 - INFO - Starting load to database
+2025-05-19 14:32:05,888 - INFO - ETL process is complete
+2025-05-19 14:33:54,949 - INFO - Initializing Spark session
+2025-05-19 14:33:54,950 - INFO - Initializing ETL process
+2025-05-19 14:33:54,950 - INFO - Starting extraction
+2025-05-19 14:34:29,845 - INFO - Starting scrub step
+2025-05-19 14:35:05,206 - INFO - Starting load to database
+2025-05-19 14:35:07,447 - INFO - ETL process is complete
+2025-05-19 14:39:07,078 - INFO - Initializing Spark session
+2025-05-19 14:39:07,078 - INFO - Initializing ETL process
+2025-05-19 14:39:07,078 - INFO - Starting extraction
+2025-05-19 14:39:40,843 - INFO - Starting scrub step
+2025-05-19 14:40:13,754 - INFO - Starting load to database
+2025-05-19 14:40:15,227 - INFO - ETL process is complete
+2025-05-19 14:43:28,640 - INFO - Initializing Spark session
+2025-05-19 14:43:28,640 - INFO - Initializing ETL process
+2025-05-19 14:43:28,640 - INFO - Starting extraction
+2025-05-19 14:44:07,237 - INFO - Starting scrub step
+2025-05-19 14:44:39,686 - INFO - Starting load to database
+2025-05-19 14:44:41,314 - INFO - ETL process is complete
+2025-05-19 17:15:51,158 - INFO - Initializing Spark session
+2025-05-19 17:15:51,158 - INFO - Initializing ETL process
+2025-05-19 17:15:51,159 - INFO - Starting extraction
+2025-05-19 17:16:27,070 - INFO - Starting scrub step
+2025-05-19 17:16:57,404 - INFO - Starting load to database
+2025-05-19 17:16:59,100 - INFO - ETL process is complete
+2025-05-19 17:23:54,544 - INFO - Initializing Spark session
+2025-05-19 17:23:54,544 - INFO - Initializing ETL process
+2025-05-19 17:23:54,545 - INFO - Starting extraction
+2025-05-19 17:24:28,636 - INFO - Starting scrub step
+2025-05-19 17:24:56,787 - INFO - Starting load to database
+2025-05-19 17:24:58,269 - INFO - ETL process is complete
+2025-05-19 17:33:59,041 - INFO - Initializing Spark session
+2025-05-19 17:33:59,041 - INFO - Initializing ETL process
+2025-05-19 17:33:59,041 - INFO - Starting extraction
+2025-05-19 17:34:35,614 - INFO - Starting scrub step
+2025-05-19 17:34:49,559 - INFO - Starting load to database
+2025-05-19 17:35:32,358 - INFO - Initializing Spark session
+2025-05-19 17:35:32,358 - INFO - Initializing ETL process
+2025-05-19 17:35:32,358 - INFO - Starting extraction
+2025-05-19 17:36:10,516 - INFO - Starting scrub step
+2025-05-19 17:36:24,996 - INFO - Starting load to database
+2025-05-19 17:36:26,878 - INFO - ETL process is complete
+2025-05-20 10:07:50,732 - INFO - Initializing Spark session
+2025-05-20 10:07:50,732 - INFO - Initializing ETL process
+2025-05-20 10:07:50,732 - INFO - Starting extraction
+2025-05-20 10:08:25,827 - INFO - Starting scrub step
+2025-05-20 10:08:55,904 - INFO - Starting load to database
+2025-05-20 10:09:38,260 - INFO - ETL process is complete
+2025-05-20 10:12:04,641 - INFO - Initializing Spark session
+2025-05-20 10:12:04,641 - INFO - Initializing ETL process
+2025-05-20 10:12:04,641 - INFO - Starting extraction
+2025-05-20 10:12:40,247 - INFO - Starting scrub step
+2025-05-20 10:13:04,345 - INFO - Starting load to database
+2025-05-20 10:13:56,506 - INFO - ETL process is complete
+2025-05-20 10:17:13,397 - INFO - Initializing Spark session
+2025-05-20 10:17:13,397 - INFO - Initializing ETL process
+2025-05-20 10:17:13,397 - INFO - Starting extraction
+2025-05-20 10:17:49,773 - INFO - Starting scrub step
+2025-05-20 10:18:33,600 - INFO - Initializing Spark session
+2025-05-20 10:18:33,600 - INFO - Initializing ETL process
+2025-05-20 10:18:33,600 - INFO - Starting extraction
+2025-05-20 10:19:13,472 - INFO - Starting scrub step
+2025-05-20 10:19:41,689 - INFO - Starting load to database
+2025-05-20 10:20:30,516 - INFO - ETL process is complete
+2025-05-20 10:29:57,912 - INFO - Initializing Spark session
+2025-05-20 10:29:57,912 - INFO - Initializing ETL process
+2025-05-20 10:29:57,912 - INFO - Starting extraction
+2025-05-20 10:30:32,708 - INFO - Starting scrub step
+2025-05-20 10:30:55,501 - INFO - Starting load to database
+2025-05-20 10:31:38,060 - INFO - ETL process is complete
