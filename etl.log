@@ -269,3 +269,64 @@
 2025-05-20 15:26:34,585 - INFO - Initializing ETL process
 2025-05-20 15:26:34,585 - INFO - Starting extraction of nrpr gz file
 2025-05-20 15:26:50,673 - INFO - Starting scrub of nrpr step
+2025-05-20 17:44:41,754 - INFO - Initializing Spark session
+2025-05-20 17:44:41,755 - INFO - Initializing ETL process
+2025-05-20 17:44:41,755 - INFO - Starting extraction of nrpr gz file
+2025-05-20 17:44:58,196 - INFO - Starting scrub of nrpr step
+2025-05-21 10:48:36,435 - INFO - Initializing Spark session
+2025-05-21 10:48:36,435 - INFO - Initializing ETL process
+2025-05-21 10:48:36,435 - INFO - Starting extraction of nrpr gz file
+2025-05-21 10:48:41,710 - INFO - Starting scrub of nrpr step
+2025-05-21 10:58:06,855 - INFO - Initializing Spark session
+2025-05-21 10:58:06,855 - INFO - Initializing ETL process
+2025-05-21 10:58:06,855 - INFO - Starting extraction of nrpr gz file
+2025-05-21 11:00:27,891 - INFO - Initializing Spark session
+2025-05-21 11:00:27,891 - INFO - Initializing ETL process
+2025-05-21 11:00:27,891 - INFO - Starting extraction of nrpr gz file
+2025-05-21 11:01:46,194 - INFO - Initializing Spark session
+2025-05-21 11:01:46,194 - INFO - Initializing ETL process
+2025-05-21 11:01:46,194 - INFO - Starting extraction of nrpr gz file
+2025-05-21 11:02:32,778 - INFO - Starting scrub of nrpr step
+2025-05-21 11:05:27,287 - INFO - Initializing Spark session
+2025-05-21 11:05:27,288 - INFO - Initializing ETL process
+2025-05-21 11:05:27,288 - INFO - Starting extraction of nrpr gz file
+2025-05-21 11:06:15,792 - INFO - Starting scrub of nrpr step
+2025-05-21 11:06:33,974 - INFO - Initializing Spark session
+2025-05-21 11:06:33,975 - INFO - Initializing ETL process
+2025-05-21 11:06:33,975 - INFO - Starting extraction of nrpr gz file
+2025-05-21 11:07:18,274 - INFO - Starting scrub of nrpr step
+2025-05-21 14:38:24,212 - INFO - Initializing Spark session
+2025-05-21 14:38:24,213 - INFO - Initializing ETL process
+2025-05-21 14:38:24,213 - INFO - Starting extraction of nrpr gz file
+2025-05-21 14:39:12,926 - INFO - Starting scrub of nrpr step
+2025-05-21 14:45:18,102 - INFO - Initializing Spark session
+2025-05-21 14:45:18,102 - INFO - Initializing ETL process
+2025-05-21 14:45:18,102 - INFO - Starting extraction of nrpr gz file
+2025-05-21 14:46:06,874 - INFO - Starting scrub of nrpr step
+2025-05-21 14:47:36,189 - INFO - Initializing Spark session
+2025-05-21 14:47:36,190 - INFO - Initializing ETL process
+2025-05-21 14:47:36,190 - INFO - Starting extraction of nrpr gz file
+2025-05-21 14:48:19,899 - INFO - Starting scrub of nrpr step
+2025-05-21 15:01:59,103 - INFO - Initializing Spark session
+2025-05-21 15:01:59,103 - INFO - Initializing ETL process
+2025-05-21 15:01:59,104 - INFO - Starting extraction of nrpr gz file
+2025-05-21 15:02:45,183 - INFO - Starting scrub of nrpr step
+2025-05-21 15:24:53,174 - INFO - Initializing Spark session
+2025-05-21 15:24:53,174 - INFO - Initializing ETL process
+2025-05-21 15:24:53,174 - INFO - Starting extraction of nrpr gz file
+2025-05-21 15:27:08,142 - INFO - Initializing Spark session
+2025-05-21 15:27:08,142 - INFO - Initializing ETL process
+2025-05-21 15:27:08,142 - INFO - Starting extraction of nrpr gz file
+2025-05-21 15:27:51,686 - INFO - Starting scrub of nrpr step
+2025-05-21 15:38:07,940 - INFO - Initializing Spark session
+2025-05-21 15:38:07,940 - INFO - Initializing ETL process
+2025-05-21 15:38:07,941 - INFO - Starting extraction of nrpr gz file
+2025-05-21 15:38:53,256 - INFO - Starting scrub of nrpr step
+2025-05-21 15:42:49,693 - INFO - Initializing Spark session
+2025-05-21 15:42:49,693 - INFO - Initializing ETL process
+2025-05-21 15:42:49,693 - INFO - Starting extraction of nrpr gz file
+2025-05-21 15:43:35,170 - INFO - Starting scrub of nrpr step
+2025-05-21 15:44:06,224 - INFO - Initializing Spark session
+2025-05-21 15:44:06,224 - INFO - Initializing ETL process
+2025-05-21 15:44:06,225 - INFO - Starting extraction of nrpr gz file
+2025-05-21 15:44:49,946 - INFO - Starting scrub of nrpr step
