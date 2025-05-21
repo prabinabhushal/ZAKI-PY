@@ -28,12 +28,12 @@ class ExtractTransferLoad:
         logger.info("Initializing ETL process")
 
         logger.info("Starting extraction of nrpr gz file")
-        nrpr_path,pro_path= Extract_nrpr.merge(args.zip_file,args.pdetail_file)
+        nrpr_path= Extract_nrpr.merge(args.folder)
 
         
         self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate()
 
         logger.info("Starting scrub of nrpr step")
-        Scrub_nrpr.scrub(nrpr_path, pro_path ,self)
+        Scrub_nrpr.scrub(nrpr_path, args.pd ,args.bc,self)
     
 
