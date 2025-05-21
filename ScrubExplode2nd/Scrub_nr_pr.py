@@ -30,8 +30,8 @@ def scrub (net_path,pro_path,pdetail_file,etl):
     in_network_cast = new_network.withColumn("service_code",col("service_code").cast(ArrayType(IntegerType()))) \
                                  .withColumn("provider_group_id", col("provider_group_id").cast(IntegerType())) 
     in_network_cast.printSchema()
+
     #provider
-    
     provider_exploded = provider.selectExpr("provider_group_id", "explode(provider_groups) as provider")   \
                                 .selectExpr("*", "explode(provider.npi) as provider_npi") \
         .selectExpr(
