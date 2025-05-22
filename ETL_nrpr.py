@@ -1,6 +1,7 @@
 import yaml
 from Extract1st import Extract_nrpr
 from ScrubExplode2nd import Scrub_nrpr
+from Process import process_nrpr
 from LoadSQL import Load_nrpr
 from pyspark.sql import SparkSession
 
@@ -34,6 +35,13 @@ class ExtractTransferLoad:
         self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate()
 
         logger.info("Starting scrub of nrpr step")
-        Scrub_nrpr.scrub(nrpr_path, args.pd ,args.bc,self)
-    
+        pr,provider_detail1,network_nr,df3,df2= Scrub_nrpr.scrub(nrpr_path, args.pd,self)
+        logger.info("Starting process of nrpr step")
+        nr_parquet,pr_parquet=process_nrpr.process(pr,provider_detail1,network_nr,df3,self)
+
+        logger.info("Starting load the data of nrpr step")
+        Load_nrpr.load(nr_parquet,pr_parquet,df2,self)
+
+        logger.info("ETL process completed successfully")
+
 
