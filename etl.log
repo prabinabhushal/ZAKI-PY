@@ -330,3 +330,34 @@
 2025-05-21 15:44:06,224 - INFO - Initializing ETL process
 2025-05-21 15:44:06,225 - INFO - Starting extraction of nrpr gz file
 2025-05-21 15:44:49,946 - INFO - Starting scrub of nrpr step
+2025-05-22 15:22:18,587 - INFO - Initializing Spark session
+2025-05-22 15:22:18,587 - INFO - Initializing ETL process
+2025-05-22 15:22:18,587 - INFO - Starting extraction of nrpr gz file
+2025-05-22 15:23:03,712 - INFO - Starting scrub of nrpr step
+2025-05-22 15:23:12,430 - INFO - Starting process of nrpr step
+2025-05-22 15:24:15,610 - INFO - Starting load the data of nrpr step
+2025-05-22 15:28:35,581 - INFO - Initializing Spark session
+2025-05-22 15:28:35,581 - INFO - Initializing ETL process
+2025-05-22 15:28:35,582 - INFO - Starting extraction of nrpr gz file
+2025-05-22 15:29:20,160 - INFO - Starting scrub of nrpr step
+2025-05-22 15:29:29,696 - INFO - Starting process of nrpr step
+2025-05-22 15:29:58,065 - INFO - Starting load the data of nrpr step
+2025-05-22 15:36:48,178 - INFO - Initializing Spark session
+2025-05-22 15:36:48,179 - INFO - Initializing ETL process
+2025-05-22 15:36:48,179 - INFO - Starting extraction of nrpr gz file
+2025-05-22 15:37:34,187 - INFO - Starting scrub of nrpr step
+2025-05-22 15:37:44,105 - INFO - Starting process of nrpr step
+2025-05-22 15:38:10,533 - INFO - Starting load the data of nrpr step
+2025-05-22 15:42:46,486 - INFO - Initializing Spark session
+2025-05-22 15:42:46,487 - INFO - Initializing ETL process
+2025-05-22 15:42:46,487 - INFO - Starting extraction of nrpr gz file
+2025-05-22 15:43:30,715 - INFO - Starting scrub of nrpr step
+2025-05-22 15:43:39,726 - INFO - Starting process of nrpr step
+2025-05-22 15:44:06,013 - INFO - Starting load the data of nrpr step
+2025-05-22 16:36:35,804 - INFO - Initializing Spark session
+2025-05-22 16:36:35,804 - INFO - Initializing ETL process
+2025-05-22 16:36:35,804 - INFO - Starting extraction of nrpr gz file
+2025-05-22 16:37:19,219 - INFO - Starting scrub of nrpr step
+2025-05-22 16:37:27,958 - INFO - Starting process of nrpr step
+2025-05-22 16:37:57,587 - INFO - Starting load the data of nrpr step
+2025-05-22 16:38:51,353 - INFO - ETL process completed successfully
