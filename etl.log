@@ -361,3 +361,137 @@
 2025-05-22 16:37:27,958 - INFO - Starting process of nrpr step
 2025-05-22 16:37:57,587 - INFO - Starting load the data of nrpr step
 2025-05-22 16:38:51,353 - INFO - ETL process completed successfully
+2025-05-23 10:30:27,306 - INFO - Initializing Spark session
+2025-05-23 10:30:27,307 - INFO - Initializing ETL process
+2025-05-23 10:30:27,307 - INFO - Starting extraction of nrpr gz file
+2025-05-23 10:31:17,262 - INFO - Starting scrub of nrpr step
+2025-05-23 10:31:27,669 - INFO - Starting process of nrpr step
+2025-05-23 10:31:58,098 - INFO - Starting load the data of nrpr step
+2025-05-23 10:33:01,499 - INFO - ETL process completed successfully
+2025-05-23 10:55:11,376 - INFO - Initializing ETL process
+2025-05-23 10:55:11,376 - INFO - Starting extraction of nrpr gz file
+2025-05-23 10:55:16,293 - INFO - Initializing Spark session
+2025-05-23 10:55:21,373 - INFO - Starting scrub of nrpr step
+2025-05-23 11:10:34,933 - INFO - Initializing ETL process
+2025-05-23 11:10:34,933 - INFO - Starting extraction of nrpr gz file
+2025-05-23 11:10:39,541 - INFO - Initializing Spark session
+2025-05-23 11:10:43,383 - INFO - Starting scrub of nrpr step
+2025-05-23 11:34:42,380 - INFO - Initializing ETL process
+2025-05-23 11:34:42,380 - INFO - Starting extraction of nrpr gz file
+2025-05-23 11:34:47,295 - INFO - Initializing Spark session
+2025-05-23 11:34:51,466 - INFO - Starting scrub of nrpr step
+2025-05-23 11:49:02,125 - INFO - Initializing ETL process
+2025-05-23 11:49:02,126 - INFO - Starting extraction of nrpr gz file
+2025-05-23 11:53:06,174 - INFO - Initializing ETL process
+2025-05-23 11:53:06,174 - INFO - Starting extraction of nrpr gz file
+2025-05-23 11:53:10,742 - INFO - Initializing Spark session
+2025-05-23 11:53:14,503 - INFO - Starting scrub of nrpr step
+2025-05-23 12:00:26,082 - INFO - Initializing ETL process
+2025-05-23 12:00:26,082 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:01:18,363 - INFO - Initializing Spark session
+2025-05-23 12:01:27,425 - INFO - Starting scrub of nrpr step
+2025-05-23 12:01:41,708 - INFO - Starting process of nrpr step
+2025-05-23 12:02:43,542 - INFO - Initializing ETL process
+2025-05-23 12:02:43,543 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:03:22,890 - INFO - Initializing Spark session
+2025-05-23 12:03:27,795 - INFO - Starting scrub of nrpr step
+2025-05-23 12:03:37,705 - INFO - Starting process of nrpr step
+2025-05-23 12:06:01,204 - INFO - Initializing ETL process
+2025-05-23 12:06:01,204 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:06:47,224 - INFO - Initializing Spark session
+2025-05-23 12:06:53,923 - INFO - Starting scrub of nrpr step
+2025-05-23 12:07:07,208 - INFO - Starting process of nrpr step
+2025-05-23 12:07:48,524 - INFO - Starting load the data of nrpr step
+2025-05-23 12:12:26,675 - INFO - Initializing ETL process
+2025-05-23 12:12:26,675 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:12:53,717 - INFO - Initializing Spark session
+2025-05-23 12:12:59,781 - INFO - Starting scrub of nrpr step
+2025-05-23 12:13:11,218 - INFO - Starting process of nrpr step
+2025-05-23 12:13:46,170 - INFO - Starting load the data of nrpr step
+2025-05-23 12:14:43,457 - INFO - ETL process completed successfully
+2025-05-23 12:16:03,542 - INFO - Initializing ETL process
+2025-05-23 12:16:03,542 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:16:29,779 - INFO - Initializing Spark session
+2025-05-23 12:16:37,876 - INFO - Starting scrub of nrpr step
+2025-05-23 12:16:52,618 - INFO - ETL process completed successfully
+2025-05-23 12:18:48,475 - INFO - Initializing ETL process
+2025-05-23 12:18:48,475 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:19:11,550 - INFO - Initializing Spark session
+2025-05-23 12:19:15,566 - INFO - Starting scrub of nrpr step
+2025-05-23 12:19:24,721 - INFO - Starting process of nrpr step
+2025-05-23 12:19:59,305 - INFO - ETL process completed successfully
+2025-05-23 12:41:47,177 - INFO - Initializing ETL process
+2025-05-23 12:41:47,177 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:42:14,631 - INFO - Initializing Spark session
+2025-05-23 12:42:19,272 - INFO - Starting scrub of nrpr step
+2025-05-23 12:42:30,949 - INFO - Starting process of nrpr step
+2025-05-23 12:43:12,346 - INFO - ETL process completed successfully
+2025-05-23 12:59:10,415 - INFO - Initializing ETL process
+2025-05-23 12:59:10,415 - INFO - Starting extraction of nrpr gz file
+2025-05-23 12:59:38,462 - INFO - Initializing Spark session
+2025-05-23 12:59:44,789 - INFO - Starting scrub of nrpr step
+2025-05-23 12:59:56,722 - INFO - Starting process of nrpr step
+2025-05-23 13:01:02,489 - INFO - ETL process completed successfully
+2025-05-23 13:05:33,805 - INFO - Initializing ETL process
+2025-05-23 13:05:33,805 - INFO - Starting extraction of nrpr gz file
+2025-05-23 13:05:55,889 - INFO - Initializing Spark session
+2025-05-23 13:06:01,074 - INFO - Starting scrub of nrpr step
+2025-05-23 13:06:10,649 - INFO - Starting process of nrpr step
+2025-05-23 13:07:02,193 - INFO - Starting load the data of nrpr step
+2025-05-23 13:09:54,583 - INFO - Initializing ETL process
+2025-05-23 13:09:54,583 - INFO - Starting extraction of nrpr gz file
+2025-05-23 13:10:17,155 - INFO - Initializing Spark session
+2025-05-23 13:10:21,891 - INFO - Starting scrub of nrpr step
+2025-05-23 13:10:31,946 - INFO - Starting process of nrpr step
+2025-05-23 13:11:23,153 - INFO - Starting load the data of nrpr step
+2025-05-23 13:15:06,894 - INFO - Initializing ETL process
+2025-05-23 13:15:06,894 - INFO - Starting extraction of nrpr gz file
+2025-05-23 13:15:28,965 - INFO - Initializing Spark session
+2025-05-23 13:15:33,712 - INFO - Starting scrub of nrpr step
+2025-05-23 13:15:43,420 - INFO - Starting process of nrpr step
+2025-05-23 13:16:37,802 - INFO - Starting load the data of nrpr step
+2025-05-23 13:20:34,661 - INFO - Initializing ETL process
+2025-05-23 13:20:34,661 - INFO - Starting extraction of nrpr gz file
+2025-05-23 13:20:57,019 - INFO - Initializing Spark session
+2025-05-23 13:21:01,706 - INFO - Starting scrub of nrpr step
+2025-05-23 13:21:11,389 - INFO - Starting process of nrpr step
+2025-05-23 13:22:04,556 - INFO - Starting load the data of nrpr step
+2025-05-23 13:27:35,632 - INFO - ETL process completed successfully
+2025-05-23 13:50:53,915 - INFO - Initializing ETL process
+2025-05-23 13:50:53,915 - INFO - Starting extraction of nrpr gz file
+2025-05-23 13:51:16,291 - INFO - Initializing Spark session
+2025-05-23 13:51:21,410 - INFO - Starting scrub of nrpr step
+2025-05-23 13:51:31,173 - INFO - Starting process of nrpr step
+2025-05-23 13:53:10,395 - INFO - Starting load the data of nrpr step
+2025-05-23 14:02:17,668 - INFO - Initializing ETL process
+2025-05-23 14:02:17,668 - INFO - Starting extraction of nrpr gz file
+2025-05-23 14:02:41,862 - INFO - Initializing Spark session
+2025-05-23 14:02:48,539 - INFO - Starting scrub of nrpr step
+2025-05-23 14:02:58,759 - INFO - Starting process of nrpr step
+2025-05-23 14:04:02,230 - INFO - Starting load the data of nrpr step
+2025-05-23 15:36:11,819 - INFO - Initializing ETL process
+2025-05-23 15:36:11,819 - INFO - Starting extraction of nrpr gz file
+2025-05-23 15:36:34,142 - INFO - Initializing Spark session
+2025-05-23 15:36:39,654 - INFO - Starting scrub of nrpr step
+2025-05-23 15:36:50,074 - INFO - Starting process of nrpr step
+2025-05-23 15:39:06,104 - INFO - Initializing ETL process
+2025-05-23 15:39:06,104 - INFO - Starting extraction of nrpr gz file
+2025-05-23 15:39:27,893 - INFO - Initializing Spark session
+2025-05-23 15:39:32,081 - INFO - Starting scrub of nrpr step
+2025-05-23 15:39:41,183 - INFO - Starting process of nrpr step
+2025-05-23 15:39:50,977 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-23 15:44:41,387 - INFO - Initializing ETL process
+2025-05-23 15:44:41,387 - INFO - Starting extraction of nrpr gz file
+2025-05-23 15:45:04,850 - INFO - Initializing Spark session
+2025-05-23 15:45:10,409 - INFO - Starting scrub of nrpr step
+2025-05-23 15:45:21,329 - INFO - Starting process of nrpr step
+2025-05-23 15:45:31,145 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-23 15:46:16,610 - INFO - Starting load the data of nrpr step
+2025-05-23 15:51:44,066 - INFO - ETL process completed successfully
+2025-05-23 16:28:45,282 - INFO - Initializing ETL process
+2025-05-23 16:28:45,283 - INFO - Starting extraction of nrpr gz file
+2025-05-23 16:29:07,107 - INFO - Initializing Spark session
+2025-05-23 16:29:11,739 - INFO - Starting scrub of nrpr step
+2025-05-23 16:29:21,951 - INFO - Starting process of nrpr step
+2025-05-23 16:29:37,204 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-23 16:30:57,547 - INFO - Starting load the data of nrpr step
