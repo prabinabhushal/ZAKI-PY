@@ -1,5 +1,5 @@
-from pyspark.sql.functions import explode,concat,expr,hash,when,array,col,concat_ws,lpad
-from pyspark.sql.types import ArrayType, IntegerType, ShortType,DoubleType
+from pyspark.sql.functions import explode,concat,expr,hash,when,array,col,concat_ws,lpad,regexp_replace
+from pyspark.sql.types import ArrayType, IntegerType, ShortType,DoubleType,LongType
 
 def scrub (nrpr_path,pro_path,etl):
     spark = etl.spark
@@ -8,39 +8,43 @@ def scrub (nrpr_path,pro_path,etl):
 
     #Highwark File
     nrpr = spark.read.json(nrpr_path)
-    exploded = nrpr.selectExpr("*", "explode(in_network) as n")
-    exploded_rates = exploded.selectExpr("*", "explode(n.negotiated_rates) as rate")
-    exploded_all = exploded_rates.selectExpr("*", "explode(rate.negotiated_prices) as price")
-    exploded_provider = exploded_all.selectExpr("*", "explode(rate.provider_groups) as group")
-    exploded_npi = exploded_provider.selectExpr("*", "explode(group.npi) as npi")
-
-    network_explode = exploded_npi.selectExpr(
-    "n.billing_code",
-    "n.billing_code_type",
-    "n.negotiation_arrangement",
-    "price.billing_class as billing_class",
-    "price.billing_code_modifier as billing_code_modifier",
-    "price.negotiated_rate as negotiated_rate",
-    "price.negotiated_type as negotiated_type",
-    "price.service_code as service_code",
-    "npi",
-    "group.tin.type as tin_type",
-    "group.tin.value as tin"
-    )
+    network_explode = (nrpr.selectExpr("*", "explode(in_network) as n").drop("in_network")
+                        .selectExpr("*", "explode(n.negotiated_rates) as rate",'n.billing_code','n.billing_code_type','n.negotiation_arrangement').drop("negotiated_rates","n")
+                        .selectExpr("*", "explode(rate.provider_groups) as group").drop("provider_groups")
+                        .selectExpr("*", "explode(group.npi) as npi","group.tin.type as tin_type","group.tin.value as tin").drop("group")
+                        .selectExpr("*", "explode(rate.negotiated_prices) as price").drop("negotiated_prices","rate")
+                        .select("*","price.*").drop("price"))
     network_explode.printSchema()
-    network_id=(network_explode.withColumn('tin', expr("REPLACE(tin, '-', '')"))
-                      .withColumn('provider_group_id',concat("npi","tin"))
-                      .withColumn('provider_group_id',hash('provider_group_id')))
+
+    network_id= (network_explode.withColumn('tin', regexp_replace(col('tin'), '-', ''))
+        .withColumn('provider_group_id',hash(concat("npi","tin"))))
     # network_id.select('npi','tin').distinct().count()
     # network_id.select('provider_group_id').distinct().count()
-    nr = network_id.drop("npi","tin_type","tin")
+    
+    nr = network_id.select("billing_code",
+                       "billing_code_type",
+                       "negotiation_arrangement",
+                       "provider_group_id",
+                       "billing_class",
+                       "billing_code_modifier",
+                       "negotiated_rate",
+                       "negotiated_type",
+                       "service_code"
+                       )
     nr.printSchema() 
 
     #Select Provider items
-    pr=network_id.select("provider_group_id","npi","tin_type","tin")
+    pr_df=network_id.select("provider_group_id","npi","tin_type","tin")
+
+    pr = (pr_df.withColumn("tin_type",when(col("tin_type") == "ein", 1)
+                        .when(col("tin_type") == "npi", 2))
+                        .withColumn("tin_type", col("tin_type").cast(ShortType())) 
+                        .withColumn("tin", col("tin").cast(LongType())))
 
     #Provider detail
     nrpr_provider= spark.read.parquet(pro_path)
+    nrpr_provider.printSchema()
+
     provider_detail1 = (nrpr_provider.selectExpr("*","loc.lat as latitude","loc.lon as longitude"
                                                  ).drop("loc", "prv_fax", "provider_name_prefix_text", "prv_type_desc")
                                     .withColumn("prv_type_code",when(col("prv_type_code") == "P", 1)
@@ -59,9 +63,10 @@ def scrub (nrpr_path,pro_path,etl):
                                           "prv_specialty_1_desc", "prv_specialty_2_desc", "prv_specialty_3_desc")
                                     .withColumn("prv_type_code",col("prv_type_code").cast(ShortType()))
                                     .withColumn("longitude",col("longitude").cast(DoubleType()))
-                                    .withColumn("latitude",col("latitude").cast(DoubleType()))
-                                    .withColumn("tin",col("tin").cast(ShortType())))
+                                    .withColumn("latitude",col("latitude").cast(DoubleType())))
+                                  
     provider_detail1.printSchema()
+ 
     #Network_scrubing
     network= nr.filter(nr.billing_code.isNotNull() & (nr.billing_code != ""))
     network_nr = network.withColumn("service_code",col("service_code").cast(ArrayType(IntegerType()))) 
@@ -73,10 +78,8 @@ def scrub (nrpr_path,pro_path,etl):
     df2 = (df.withColumn("billing_code", lpad(col("billing_code"), 5, "0"))
       .filter((col("billing_code").isNotNull()) & (col("billing_code") != ""))
       .drop("_c4", "_c5", "_c6")
+      .withColumn("taxonomy_list",array(regexp_replace(col("taxonomy_list"), r"^\{|\}$", "")))
     )
-    df2.printSchema()
     df3 = df2.select('billing_code','taxonomy_list')
-    df3.printSchema()
-
 
     return pr,provider_detail1,network_nr,df3,df2
