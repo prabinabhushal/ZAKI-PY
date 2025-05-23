@@ -9,7 +9,8 @@ def scrub (nrpr_path,pro_path,etl):
     #Highwark File
     nrpr = spark.read.json(nrpr_path)
     network_explode = (nrpr.selectExpr("*", "explode(in_network) as n").drop("in_network")
-                        .selectExpr("*", "explode(n.negotiated_rates) as rate",'n.billing_code','n.billing_code_type','n.negotiation_arrangement').drop("negotiated_rates","n")
+                        .select("*", "n.*").drop("n")
+                        .selectExpr("*", "explode(negotiated_rates) as rate").drop("negotiated_rates")
                         .selectExpr("*", "explode(rate.provider_groups) as group").drop("provider_groups")
                         .selectExpr("*", "explode(group.npi) as npi","group.tin.type as tin_type","group.tin.value as tin").drop("group")
                         .selectExpr("*", "explode(rate.negotiated_prices) as price").drop("negotiated_prices","rate")
