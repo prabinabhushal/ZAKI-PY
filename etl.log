@@ -495,3 +495,80 @@
 2025-05-23 16:29:21,951 - INFO - Starting process of nrpr step
 2025-05-23 16:29:37,204 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
 2025-05-23 16:30:57,547 - INFO - Starting load the data of nrpr step
+2025-05-26 10:59:19,465 - INFO - Initializing ETL process
+2025-05-26 10:59:19,465 - INFO - Starting extraction of nrpr gz file
+2025-05-26 10:59:47,056 - INFO - Initializing Spark session
+2025-05-26 10:59:53,227 - INFO - Starting scrub of nrpr step
+2025-05-26 11:09:07,421 - INFO - Initializing ETL process
+2025-05-26 11:09:07,421 - INFO - Starting extraction of nrpr gz file
+2025-05-26 11:09:29,395 - INFO - Initializing Spark session
+2025-05-26 11:09:34,168 - INFO - Starting scrub of nrpr step
+2025-05-26 11:10:45,140 - INFO - Initializing ETL process
+2025-05-26 11:10:45,140 - INFO - Starting extraction of nrpr gz file
+2025-05-26 11:11:06,850 - INFO - Initializing Spark session
+2025-05-26 11:11:11,122 - INFO - Starting scrub of nrpr step
+2025-05-26 11:14:39,683 - INFO - Initializing ETL process
+2025-05-26 11:14:39,683 - INFO - Starting extraction of nrpr gz file
+2025-05-26 11:15:01,455 - INFO - Initializing Spark session
+2025-05-26 11:15:05,487 - INFO - Starting scrub of nrpr step
+2025-05-26 11:15:14,087 - INFO - Starting process of nrpr step
+2025-05-26 11:44:14,560 - INFO - Initializing ETL process
+2025-05-26 11:44:14,561 - INFO - Starting extraction of nrpr gz file
+2025-05-26 11:44:36,471 - INFO - Initializing Spark session
+2025-05-26 11:44:42,942 - INFO - Starting scrub of nrpr step
+2025-05-26 11:44:52,546 - INFO - Starting process of nrpr step
+2025-05-26 11:52:05,615 - INFO - Initializing ETL process
+2025-05-26 11:52:05,615 - INFO - Starting extraction of nrpr gz file
+2025-05-26 11:52:27,269 - INFO - Initializing Spark session
+2025-05-26 11:52:33,734 - INFO - Starting scrub of nrpr step
+2025-05-26 11:52:45,244 - INFO - Starting process of nrpr step
+2025-05-26 11:58:47,051 - INFO - Initializing ETL process
+2025-05-26 11:58:47,051 - INFO - Starting extraction of nrpr gz file
+2025-05-26 11:59:08,790 - INFO - Initializing Spark session
+2025-05-26 11:59:17,929 - INFO - Starting scrub of nrpr step
+2025-05-26 11:59:26,900 - INFO - Starting process of nrpr step
+2025-05-26 12:06:25,187 - INFO - Initializing ETL process
+2025-05-26 12:06:25,187 - INFO - Starting extraction of nrpr gz file
+2025-05-26 12:06:52,372 - INFO - Initializing Spark session
+2025-05-26 12:06:58,563 - INFO - Starting scrub of nrpr step
+2025-05-26 12:07:30,726 - INFO - Initializing ETL process
+2025-05-26 12:07:30,726 - INFO - Starting extraction of nrpr gz file
+2025-05-26 12:07:55,111 - INFO - Initializing Spark session
+2025-05-26 12:08:00,762 - INFO - Starting scrub of nrpr step
+2025-05-26 12:08:11,269 - INFO - Starting process of nrpr step
+2025-05-26 13:09:22,685 - INFO - Initializing ETL process
+2025-05-26 13:09:22,686 - INFO - Starting extraction of nrpr gz file
+2025-05-26 13:09:44,655 - INFO - Initializing Spark session
+2025-05-26 13:09:49,433 - INFO - Starting scrub of nrpr step
+2025-05-26 13:09:59,633 - INFO - Starting process of nrpr step
+2025-05-26 13:09:59,691 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 16:13:47,725 - INFO - Initializing ETL process
+2025-05-26 16:13:47,726 - INFO - Starting extraction of nrpr gz file
+2025-05-26 16:14:09,488 - INFO - Initializing Spark session
+2025-05-26 16:14:15,389 - INFO - Starting scrub of nrpr step
+2025-05-26 16:14:24,564 - INFO - Starting process of nrpr step
+2025-05-26 16:14:24,656 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 16:25:44,841 - INFO - Initializing ETL process
+2025-05-26 16:25:44,841 - INFO - Starting extraction of nrpr gz file
+2025-05-26 16:26:12,751 - INFO - Initializing Spark session
+2025-05-26 16:26:17,947 - INFO - Starting scrub of nrpr step
+2025-05-26 16:26:31,524 - INFO - Starting process of nrpr step
+2025-05-26 16:26:31,598 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 16:31:20,739 - INFO - Initializing ETL process
+2025-05-26 16:31:20,739 - INFO - Starting extraction of nrpr gz file
+2025-05-26 16:31:42,994 - INFO - Initializing Spark session
+2025-05-26 16:31:47,265 - INFO - Starting scrub of nrpr step
+2025-05-26 16:31:56,715 - INFO - Starting process of nrpr step
+2025-05-26 16:31:56,783 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 16:41:14,508 - INFO - Initializing ETL process
+2025-05-26 16:41:14,508 - INFO - Starting extraction of nrpr gz file
+2025-05-26 16:41:37,467 - INFO - Initializing Spark session
+2025-05-26 16:41:41,644 - INFO - Starting scrub of nrpr step
+2025-05-26 16:41:50,579 - INFO - Starting process of nrpr step
+2025-05-26 16:41:50,636 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 16:43:55,849 - INFO - Initializing ETL process
+2025-05-26 16:43:55,849 - INFO - Starting extraction of nrpr gz file
+2025-05-26 16:44:21,812 - INFO - Initializing Spark session
+2025-05-26 16:44:28,730 - INFO - Starting scrub of nrpr step
+2025-05-26 16:44:42,409 - INFO - Starting process of nrpr step
+2025-05-26 16:44:42,534 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
