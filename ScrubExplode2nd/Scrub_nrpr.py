@@ -32,7 +32,10 @@ def scrub (nrpr_path,pro_path,etl):
                        "negotiated_type",
                        "service_code"
                        )
-    nr.printSchema() 
+    #Network_scrubing
+    network= nr.filter(nr.billing_code.isNotNull() & (nr.billing_code != ""))
+    network_nr = network.withColumn("service_code",col("service_code").cast(ArrayType(IntegerType()))) 
+    network_nr.printSchema()
 
     #Select Provider items
     pr_df=network_id.select("provider_group_id","npi","tin_type","tin")
@@ -46,8 +49,7 @@ def scrub (nrpr_path,pro_path,etl):
     nrpr_provider= spark.read.parquet(pro_path)
     nrpr_provider.printSchema()
 
-    provider_detail1 = (nrpr_provider.selectExpr("*","loc.lat as latitude","loc.lon as longitude"
-                                                 ).drop("loc", "prv_fax", "provider_name_prefix_text", "prv_type_desc")
+    provider_detail1 = (nrpr_provider.selectExpr("*","loc.lat as latitude","loc.lon as longitude")
                                     .withColumn("prv_type_code",when(col("prv_type_code") == "P", 1)
                                                                   .when(col("prv_type_code") == "F", 2)
                                                                   .otherwise(None))
@@ -61,17 +63,13 @@ def scrub (nrpr_path,pro_path,etl):
                                     
                                     .drop("provider_first_name", "provider_last_name", "provider_middle_name",
                                           "prv_taxonomy_1_code", "prv_taxonomy_2_code", "prv_taxonomy_3_code",
-                                          "prv_specialty_1_desc", "prv_specialty_2_desc", "prv_specialty_3_desc")
+                                          "prv_specialty_1_desc", "prv_specialty_2_desc", "prv_specialty_3_desc",
+                                          "loc", "prv_fax", "provider_name_prefix_text", "prv_type_desc")
                                     .withColumn("prv_type_code",col("prv_type_code").cast(ShortType()))
                                     .withColumn("longitude",col("longitude").cast(DoubleType()))
-                                    .withColumn("latitude",col("latitude").cast(DoubleType())))
-                                  
+                                    .withColumn("latitude",col("latitude").cast(DoubleType())))                           
     provider_detail1.printSchema()
  
-    #Network_scrubing
-    network= nr.filter(nr.billing_code.isNotNull() & (nr.billing_code != ""))
-    network_nr = network.withColumn("service_code",col("service_code").cast(ArrayType(IntegerType()))) 
-    network_nr.printSchema()
 
     df = spark.read.csv("billing_taxonomy_list.csv", header=True, inferSchema=True)
     df.printSchema()
@@ -81,6 +79,7 @@ def scrub (nrpr_path,pro_path,etl):
       .drop("_c4", "_c5", "_c6")
       .withColumn("taxonomy_list",array(regexp_replace(col("taxonomy_list"), r"^\{|\}$", "")))
     )
+    df2.printSchema()
     df3 = df2.select('billing_code','taxonomy_list')
 
     return pr,provider_detail1,network_nr,df3,df2
