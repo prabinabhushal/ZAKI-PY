@@ -41,5 +41,3 @@ class ExtractTransferLoad:
         Load_nrpr.load(nr_parquet,pr_parquet,df2,self)
 
         logger.info("ETL process completed successfully")
-
-
