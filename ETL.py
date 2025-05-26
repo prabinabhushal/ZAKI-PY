@@ -24,15 +24,14 @@ class ExtractTransferLoad:
         self.password= f1['POSTGRES']['password']
 
     def run(self,args,logger):
-        logger.info("Initializing Spark session")
-        
         logger.info("Initializing ETL process")
 
         logger.info("Starting extraction")
         net_path, pro_path = Extract_nr_pr.extract(args.zip_file)
 
         pdetail_file = args.pdetail_file
-        
+
+        logger.info("Initializing Spark session")        
         self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate()
 
         logger.info("Starting scrub step")
