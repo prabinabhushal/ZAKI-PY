@@ -30,7 +30,7 @@ class ExtractTransferLoad:
         nrpr_path= Extract_nrpr.merge(args.folder)
 
         logger.info("Initializing Spark session")
-        self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate()
+        self.spark = SparkSession.builder.appName('ETL').config("spark.driver.memory", self.container4).getOrCreate() 
 
         logger.info("Starting scrub of nrpr step")
         pr,provider_detail1,network_nr,df3,df2= Scrub_nrpr.scrub(nrpr_path, args.pd,self)
