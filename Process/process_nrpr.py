@@ -11,10 +11,10 @@ def process(pr,provider_detail1,network_nr,df3,logger):
     nrpr_network.printSchema()
   
     #Join nr and pr table 
-
     logger.info("After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.")
     nrpr_final = nrpr_pr.join(nrpr_network ,on ="provider_group_id",how = "inner" )
     specialized_filter = nrpr_final.filter(size(array_intersect(col("taxonomy_codes"), col("taxonomy_list"))) > 0)
+    specialized_filter.show(5)
 
     nr_parquet ='output_nrpr/nr'
     pr_parquet ='output_nrpr/pr'
