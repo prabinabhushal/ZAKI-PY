@@ -572,3 +572,103 @@
 2025-05-26 16:44:28,730 - INFO - Starting scrub of nrpr step
 2025-05-26 16:44:42,409 - INFO - Starting process of nrpr step
 2025-05-26 16:44:42,534 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 16:58:42,628 - INFO - Initializing ETL process
+2025-05-26 16:58:42,628 - INFO - Starting extraction of nrpr gz file
+2025-05-26 16:59:10,266 - INFO - Initializing Spark session
+2025-05-26 16:59:18,814 - INFO - Starting scrub of nrpr step
+2025-05-26 16:59:48,920 - INFO - Starting process of nrpr step
+2025-05-26 16:59:49,035 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-26 17:01:55,679 - INFO - Initializing ETL process
+2025-05-26 17:01:55,679 - INFO - Starting extraction of nrpr gz file
+2025-05-26 17:02:17,416 - INFO - Initializing Spark session
+2025-05-26 17:02:22,995 - INFO - Starting scrub of nrpr step
+2025-05-26 17:02:32,414 - INFO - Starting process of nrpr step
+2025-05-26 17:02:32,525 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 11:23:44,816 - INFO - Initializing ETL process
+2025-05-27 11:23:44,817 - INFO - Starting extraction of nrpr gz file
+2025-05-27 11:24:06,767 - INFO - Initializing Spark session
+2025-05-27 11:24:10,875 - INFO - Starting scrub of nrpr step
+2025-05-27 11:24:20,536 - INFO - Starting process of nrpr step
+2025-05-27 11:24:20,644 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 11:29:48,535 - INFO - Initializing ETL process
+2025-05-27 11:29:48,535 - INFO - Starting extraction of nrpr gz file
+2025-05-27 11:30:11,563 - INFO - Initializing Spark session
+2025-05-27 11:30:16,530 - INFO - Starting scrub of nrpr step
+2025-05-27 11:30:25,446 - INFO - Starting process of nrpr step
+2025-05-27 11:30:25,526 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 11:33:11,501 - INFO - Initializing ETL process
+2025-05-27 11:33:11,501 - INFO - Starting extraction of nrpr gz file
+2025-05-27 11:33:33,638 - INFO - Initializing Spark session
+2025-05-27 11:33:39,176 - INFO - Starting scrub of nrpr step
+2025-05-27 11:33:48,699 - INFO - Starting process of nrpr step
+2025-05-27 11:33:48,805 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 13:02:56,864 - INFO - Initializing ETL process
+2025-05-27 13:02:56,865 - INFO - Starting extraction of nrpr gz file
+2025-05-27 13:03:19,111 - INFO - Initializing Spark session
+2025-05-27 13:03:24,272 - INFO - Starting scrub of nrpr step
+2025-05-27 13:03:35,617 - INFO - Starting process of nrpr step
+2025-05-27 13:03:35,702 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 13:20:16,210 - INFO - Initializing ETL process
+2025-05-27 13:20:16,210 - INFO - Starting extraction of nrpr gz file
+2025-05-27 13:20:43,208 - INFO - Initializing Spark session
+2025-05-27 13:20:48,596 - INFO - Starting scrub of nrpr step
+2025-05-27 13:21:00,172 - INFO - Starting process of nrpr step
+2025-05-27 13:21:00,296 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 13:21:50,007 - INFO - Starting load the data of nrpr step
+2025-05-27 13:21:50,635 - INFO - Closing down clientserver connection
+2025-05-27 13:31:16,902 - INFO - Initializing ETL process
+2025-05-27 13:31:16,902 - INFO - Starting extraction of nrpr gz file
+2025-05-27 13:31:41,100 - INFO - Initializing Spark session
+2025-05-27 13:31:46,408 - INFO - Starting scrub of nrpr step
+2025-05-27 13:31:58,723 - INFO - Starting process of nrpr step
+2025-05-27 13:31:58,872 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 13:33:02,888 - INFO - Starting load the data of nrpr step
+2025-05-27 13:33:03,523 - INFO - Closing down clientserver connection
+2025-05-27 13:42:00,793 - INFO - Initializing ETL process
+2025-05-27 13:42:00,794 - INFO - Starting extraction of nrpr gz file
+2025-05-27 13:42:22,665 - INFO - Initializing Spark session
+2025-05-27 13:42:30,130 - INFO - Starting scrub of nrpr step
+2025-05-27 13:42:45,470 - INFO - Starting process of nrpr step
+2025-05-27 13:42:45,589 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 13:43:39,031 - INFO - Starting load the data of nrpr step
+2025-05-27 13:43:39,783 - INFO - Closing down clientserver connection
+2025-05-27 13:48:07,192 - INFO - Initializing ETL process
+2025-05-27 13:48:07,192 - INFO - Starting extraction of nrpr gz file
+2025-05-27 13:48:29,242 - INFO - Initializing Spark session
+2025-05-27 13:48:33,571 - INFO - Starting scrub of nrpr step
+2025-05-27 13:48:44,963 - INFO - Starting process of nrpr step
+2025-05-27 13:48:45,086 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 13:49:33,269 - INFO - Starting load the data of nrpr step
+2025-05-27 13:55:09,408 - INFO - ETL process completed successfully
+2025-05-27 13:55:09,455 - INFO - Closing down clientserver connection
+2025-05-27 14:03:32,478 - INFO - Initializing ETL process
+2025-05-27 14:03:32,478 - INFO - Starting extraction of nrpr gz file
+2025-05-27 14:04:01,505 - INFO - Initializing Spark session
+2025-05-27 14:04:08,518 - INFO - Starting scrub of nrpr step
+2025-05-27 14:04:11,164 - INFO - Closing down clientserver connection
+2025-05-27 14:04:36,978 - INFO - Initializing ETL process
+2025-05-27 14:04:36,978 - INFO - Starting extraction of nrpr gz file
+2025-05-27 14:05:00,713 - INFO - Initializing Spark session
+2025-05-27 14:05:04,703 - INFO - Starting scrub of nrpr step
+2025-05-27 14:05:18,307 - INFO - Starting process of nrpr step
+2025-05-27 14:05:18,416 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-27 14:06:42,232 - INFO - Starting load the data of nrpr step
+2025-05-27 14:11:58,128 - INFO - ETL process completed successfully
+2025-05-27 14:11:58,147 - INFO - Closing down clientserver connection
+2025-05-30 12:08:19,974 - INFO - Initializing ETL process
+2025-05-30 12:08:19,975 - INFO - Starting extraction of nrpr gz file
+2025-05-30 12:08:43,238 - INFO - Initializing Spark session
+2025-05-30 12:08:48,001 - INFO - Starting scrub of nrpr step
+2025-05-30 12:08:59,570 - INFO - Starting process of nrpr step
+2025-05-30 12:08:59,679 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-30 12:10:28,852 - INFO - Starting load the data of nrpr step
+2025-05-30 12:10:29,254 - INFO - Closing down clientserver connection
+2025-05-30 12:18:34,508 - INFO - Initializing ETL process
+2025-05-30 12:18:34,508 - INFO - Starting extraction of nrpr gz file
+2025-05-30 12:18:59,155 - INFO - Initializing Spark session
+2025-05-30 12:19:04,456 - INFO - Starting scrub of nrpr step
+2025-05-30 12:19:17,192 - INFO - Starting process of nrpr step
+2025-05-30 12:19:17,309 - INFO - After joining nr and pr, nrpr_final is filtered to keep only rows with matching taxonomy codes.
+2025-05-30 12:20:39,442 - INFO - Starting load the data of nrpr step
+2025-05-30 12:25:57,191 - INFO - ETL process completed successfully
+2025-05-30 12:25:57,245 - INFO - Closing down clientserver connection
