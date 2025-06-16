@@ -76,7 +76,7 @@ class Mentor(Intern):
         super().data()  
         print(f"Mentored by: {self.mentor}")
 
-mentor1 = Mentor('Prabina', 23, 'Koteshwor', 20000, "Hari")
+mentor1 = Mentor('Prabina', 23, 'Koteshwor', 20000, "ram")
 mentor1.data()
 
 print(new1.age)
