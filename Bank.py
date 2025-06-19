@@ -1,9 +1,7 @@
 from abc import ABC, abstractmethod
-import json
 
 class Bank(ABC):
     bank_name = 'Nabil Bank'
-
 
     def __init__(self, name, pin, address, balance=0,status ='Active'):
         self.id = id(self)
@@ -34,8 +32,7 @@ class Bank(ABC):
                 return func(*args)
             return wrapper
         return check_valid
-    
-        
+     
     def check_validation(func):
         def wrapper(self,amount,*args):
             if self.balance < amount:
@@ -43,11 +40,10 @@ class Bank(ABC):
                 return False
             return func(self,amount,*args)
         return wrapper
-  
-        
+       
 class Staff(Bank):
-    def __init__(self, name, pin, address, balance=0):
-        super().__init__(name, pin, address, balance)
+    def __init__(self, name, pin, address, balance=0, status='Active'):
+        super().__init__(name, pin, address, balance, status)
         self.break_time = ['12:00 pm' , '[1:00 pm]']
         print(f"{self.name} is an employee based on {self.address} branch and her scheduled break time is {self.break_time}")
 
@@ -57,7 +53,6 @@ class Staff(Bank):
             return False
         self.balance += amount
         print(f"Your balance is {self.balance}")
-    
 
     @Bank.check_data_type(int)
     @Bank.check_validation
@@ -65,7 +60,6 @@ class Staff(Bank):
         print(f"{self.name} your {amount} has been withdrawn")
         self.balance -= amount
         print(f"Your balance is {self.balance}")
-
       
     @Bank.check_data_type(int)
     @Bank.check_validation  
@@ -86,9 +80,8 @@ class Staff(Bank):
     print("Pin is updated.")
 
 class Customer(Bank):
-    def __init__(self, name, pin, address, balance=0):
-        super().__init__(name, pin, address, balance)
-
+    def __init__(self, name, pin, address, balance=0, status='Active'):
+        super().__init__(name, pin, address, balance, status)
 
     def deposite(self, amount):
         if amount < 0:
@@ -120,7 +113,5 @@ class Customer(Bank):
     def pin(self, new_pin):
         self.__pin = new_pin
     print("Pin is updated.")
-
-
 
 
