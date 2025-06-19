@@ -46,7 +46,7 @@ class Bank(ABC):
   
         
 class Staff(Bank):
-    def __init__(self, name, pin, address, balance):
+    def __init__(self, name, pin, address, balance=0):
         super().__init__(name, pin, address, balance)
         self.break_time = ['12:00 pm' , '[1:00 pm]']
         print(f"{self.name} is an employee based on {self.address} branch and her scheduled break time is {self.break_time}")
@@ -69,12 +69,12 @@ class Staff(Bank):
       
     @Bank.check_data_type(int)
     @Bank.check_validation  
-    def transfer(self, amount, receiver_name):
-        print(f"{self.name} has transfer amount {amount} to {receiver_name}")
+    def transfer(self, amount, receiver):
+        print(f"{self.name} has transfer amount {amount} to {receiver.name}")
         self.balance -= amount
         receiver.balance += amount
         print(f"Your balance is {self.balance}")
-        print(f"{receiver_name} balance is {receiver.balance}")
+        print(f"{receiver.name} balance is {receiver.balance}")
 
     @property
     def get_pin(self):
@@ -106,8 +106,8 @@ class Customer(Bank):
 
     @Bank.check_data_type(int)
     @Bank.check_validation  
-    def transfer(self, amount, receiver_name):
-        print(f"{self.name} has transfer amount {amount} to {receiver_name}")
+    def transfer(self, amount, receiver):
+        print(f"{self.name} has transfer amount {amount} to {receiver.name}")
         self.balance -= amount
         receiver.balance += amount
         print(f"Your balance is {self.balance}")
@@ -122,38 +122,5 @@ class Customer(Bank):
     print("Pin is updated.")
 
 
-staff = Staff('Prabina',123,'Koteshwor', 100)
-receiver = Staff('Namu',123,'Kalanki', 100)
-print(staff.id)
-print(staff.status)
-staff.deposite(1000)
-staff.withdrawal(500)
-staff.transfer(100,receiver.name)
-
-customer = Customer('Siri',123,'Koteshwor',1000)
-print(customer.id)
-print(staff.status)
-customer.deposite(1000)
-customer.withdrawal(500)
-customer.transfer(100,receiver.name)
-customer.pin = 4567
-print("New pin", customer.get_pin) 
-
-
-
-data = {
-    staff.name:
-    {'id': staff.id,'name': staff.name,'pin': staff._Bank__pin, 'address': staff.address,'balance': staff.balance}
-}
-with open('staff_data.json', 'w') as f:
-    json.dump(data, f, indent=4)
-
-
-data1 = {
-    customer.name:
-        {'id': customer.id,'name': customer.name,'pin': customer._Bank__pin, 'address': customer.address,'balance': customer.balance }
-}
-with open('customer_data.json', 'w') as f1:
-    json.dump(data, f1, indent=4)
 
 
